@@ -2,7 +2,6 @@
 
 Welcome to Shouter's Tinker project! This project serves as a sandbox/playground for anyone to work with Shouter's tech stack.
 
-----
 
 ## About the app
 
