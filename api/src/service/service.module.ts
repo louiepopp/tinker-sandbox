@@ -7,15 +7,15 @@ import { forwardRef } from '@nestjs/common';
 import { ServiceService } from './service.service';
 
 @Module({
-  imports: [
-    MongooseModule.forFeature([{ name: Service.name, schema: ServiceSchema }]),
-    forwardRef(() => PersonModule),
-  ],
-  exports: [
-    MongooseModule.forFeature([{ name: Service.name, schema: ServiceSchema }]),
-    ServiceService,
-  ],
-  controllers: [ServiceController],
-  providers: [ServiceService],
+    imports: [
+        MongooseModule.forFeature([{ name: Service.name, schema: ServiceSchema }]),
+        forwardRef(() => PersonModule),
+    ],
+    exports: [
+        MongooseModule.forFeature([{ name: Service.name, schema: ServiceSchema }]),
+        ServiceService,
+    ],
+    controllers: [ServiceController],
+    providers: [ServiceService],
 })
 export class ServiceModule {}

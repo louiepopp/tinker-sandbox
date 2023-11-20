@@ -11,7 +11,7 @@ const Create = () => {
             Create
         </Text>
         <Text variant={TextVariant.subheader}>
-            Let's do some creating for some tinks!
+          {"Let's do some creating for some tinks!"}
         </Text>
         <View style={style.imageContainer}>
           <TinksSvg />

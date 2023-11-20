@@ -5,15 +5,15 @@ import { createServiceDto } from './dto/create-service.dto';
 
 @Controller('service')
 export class ServiceController {
-  constructor(private serviceService: ServiceService) {}
+    constructor(private serviceService: ServiceService) {}
 
   @Get()
-  async findAll(): Promise<Service[]> {
-    return this.serviceService.findAll();
-  }
+    async findAll(): Promise<Service[]> {
+        return this.serviceService.findAll();
+    }
 
   @Post()
   async create(@Body() createServiceDto: createServiceDto): Promise<Service> {
-    return this.serviceService.create(createServiceDto);
+      return this.serviceService.create(createServiceDto);
   }
 }
