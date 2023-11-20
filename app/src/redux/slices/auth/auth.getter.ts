@@ -1,5 +1,5 @@
-import { AuthState } from "./auth.slice";
-import type { RootState } from "../../store";
+import { AuthState } from './auth.slice';
+import type { RootState } from '../../store';
 
 export const getAuthState = (state: RootState): AuthState => state.authReducer;
 export const getAuthName = (state: RootState): string | undefined => getAuthState(state).name;

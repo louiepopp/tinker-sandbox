@@ -1,5 +1,4 @@
-import Raect from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import sv from 'style-variants';
 import { Theme } from '../consts/theme';
 
@@ -18,91 +17,91 @@ interface IProps {
 }
 
 const Button = ({
-    children,
-    onPress = () => {},
-    variant = ButtonVariant.primary
+  children,
+  onPress = () => {},
+  variant = ButtonVariant.primary
 }: IProps) => {
-    const textStyle = textStyleVariants({variant});
+  const textStyle = textStyleVariants({variant});
 
-    return (
-        <View>
-            <Pressable
-                style={({pressed}) => buttonStyleVariants({variant, pressed})}
-                onPress={onPress}
-            >
-                <Text style={textStyle}>
-                    {children}
-                </Text>
-            </Pressable>
-        </View>
-    )
+  return (
+    <View>
+      <Pressable
+        style={({pressed}) => buttonStyleVariants({variant, pressed})}
+        onPress={onPress}
+      >
+        <Text style={textStyle}>
+          {children}
+        </Text>
+      </Pressable>
+    </View>
+  )
 };
 export default Button;
 
 const textStyleVariants = sv({
-    base: {
-        fontSize: 20,
-    },
-    variants: {
-      variant: {
-        primary: {
-            color: Theme.white
-        },
-        secondary: {
-            color: Theme.white
-        },
-        outlined: {
-            color: Theme.black
-        }
+  base: {
+    fontSize: 20,
+  },
+  variants: {
+    variant: {
+      primary: {
+        color: Theme.white
       },
+      secondary: {
+        color: Theme.white
+      },
+      outlined: {
+        color: Theme.black
+      }
     },
-    defaultVariants: {
-      variant: 'primary',
-    },
+  },
+  defaultVariants: {
+    variant: 'primary',
+  },
 });
 
 const buttonStyleVariants = sv({
-    base: {
-        width: '100%',
-        height: 60,
-        borderRadius: 10,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    variants: {
-      variant: {
-        primary: {
-            backgroundColor: Theme.primary
-        },
-        secondary: {
-            backgroundColor: Theme.secondary,
-        },
-        outlined: {
-            backgroundColor: Theme.white,
-            borderColor: Theme.default,
-            borderWidth: 1,
-        },
-        warning: {
-            backgroundColor: Theme.warning
-        }
+  base: {
+    width: '100%',
+    height: 60,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  variants: {
+    variant: {
+      primary: {
+        backgroundColor: Theme.primary
       },
-      disabled: {
-        true: {
-          opacity: 0.5,
-        },
+      secondary: {
+        backgroundColor: Theme.secondary,
       },
-      pressed: {
-        true: {
-            opacity: 0.5,
-        },
-        false: {
-            opacity: 1,
-        }
+      outlined: {
+        backgroundColor: Theme.white,
+        borderColor: Theme.default,
+        borderWidth: 1,
+      },
+      warning: {
+        backgroundColor: Theme.warning
       }
     },
-    defaultVariants: {
-      variant: 'primary',
-      disabled: false,
-      pressed: false,
+    disabled: {
+      true: {
+        opacity: 0.5,
+      },
     },
-  });
+    pressed: {
+      true: {
+        opacity: 0.5,
+      },
+      false: {
+        opacity: 1,
+      }
+    }
+  },
+  defaultVariants: {
+    variant: 'primary',
+    disabled: false,
+    pressed: false,
+  },
+});

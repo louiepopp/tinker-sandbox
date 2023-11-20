@@ -8,24 +8,24 @@ interface ILayout {
 }
 
 const Layout = ({ children }: ILayout) => {
-    return (
-        <View style={style.container}>
-            <View style={style.content}>
-                {children}
-            </View>
-            <Navigation />
-        </View>
-    )
+  return (
+    <View style={style.container}>
+      <View style={style.content}>
+        {children}
+      </View>
+      <Navigation />
+    </View>
+  );
 };
 export default Layout;
 
 const style = StyleSheet.create({
-    container: {
-        height: '100%',
-        width: '100%',
-        backgroundColor: Theme.white,
-    },
-    content: {
-        flex: 1,
-    },
-})
+  container: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: Theme.white,
+  },
+  content: {
+    flex: 1,
+  },
+});

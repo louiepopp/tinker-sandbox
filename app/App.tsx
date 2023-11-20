@@ -4,10 +4,10 @@ import AppNavigation from './src/screens/AppNavigation';
 
 
 const App = () => { 
-    return (
-        <Provider store={store}>
-            <AppNavigation />
-        </Provider>
-    );
-}
+  return (
+    <Provider store={store}>
+      <AppNavigation />
+    </Provider>
+  );
+};
 export default App;

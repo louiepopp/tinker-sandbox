@@ -7,7 +7,6 @@ import { PersonModule } from './person/person.module';
 import { ServiceModule } from './service/service.module';
 import { AuthModule } from './auth/auth.module';
 
-
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -15,7 +14,7 @@ import { AuthModule } from './auth/auth.module';
       dbName: process.env.DATABASE_NAME,
       auth: {
         username: process.env.DATABASE_USER,
-        password: process.env.DATABASE_PASS, 
+        password: process.env.DATABASE_PASS,
       },
     }),
     PersonModule,
