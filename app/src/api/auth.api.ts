@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { ILoginRequest, ISignUpRequest } from '../interfaces/auth.interface'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { ILoginRequest, ISignUpRequest } from '../interfaces/auth.interface';
 import { Settings } from '../consts/settings';
 
 export const authAPI = createApi({
@@ -23,7 +23,7 @@ export const authAPI = createApi({
       })
     })
   })
-})
+});
 
 export const {
   useSigninMutation,

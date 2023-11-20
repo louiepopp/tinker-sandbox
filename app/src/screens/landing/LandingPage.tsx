@@ -18,24 +18,24 @@ const LandingPage = () => {
       <View style={styles.header}>
         <TinksLogo />
         <Text variant={TextVariant.header}>
-                    Tinker
+          Tinker
         </Text>
         <Divider />
       </View>
       <Button
         onPress={() => setSignUpOpen(true)}
       >
-                Sign up
+        Sign up
       </Button>
       <Button
         variant={ButtonVariant.outlined}
         onPress={() => setSignInOpen(true)}
       >
-                Sign in
+        Sign in
       </Button>
       <View style={styles.footer}>
         <Text variant={TextVariant.text}>
-                    Powered by Duffelbag
+          Powered by Shouter
         </Text>
       </View>
       <Modal

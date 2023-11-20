@@ -7,9 +7,9 @@ import { useRoute } from '@react-navigation/native';
 
 
 interface INavigationItem {
-    title: string;
-    icon: FC<SvgProps>;
-    route: string;
+  title: string;
+  icon: FC<SvgProps>;
+  route: string;
 }
 
 const NavigationItem = ({ title, icon: Icon, route }: INavigationItem) => {

@@ -4,16 +4,16 @@ import { Theme } from '../consts/theme';
 
 
 export enum ButtonVariant {
-    primary = 'primary',
-    secondary = 'secondary',
-    outlined = 'outlined',
-    warning = 'warning'
+  primary = 'primary',
+  secondary = 'secondary',
+  outlined = 'outlined',
+  warning = 'warning'
 }
 
 interface IProps {
-    children: string,
-    variant?: ButtonVariant,
-    onPress?: () => void 
+  children: string,
+  variant?: ButtonVariant,
+  onPress?: () => void 
 }
 
 const Button = ({
@@ -34,7 +34,7 @@ const Button = ({
         </Text>
       </Pressable>
     </View>
-  )
+  );
 };
 export default Button;
 

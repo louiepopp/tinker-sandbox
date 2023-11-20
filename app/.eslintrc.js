@@ -43,7 +43,11 @@ module.exports = {
     ],
     'quotes': [
       'error',
-      'single'
+      'single',
+      {
+        'allowTemplateLiterals': true,
+        'avoidEscape': true
+      }
     ],
     'semi': [
       'error',

@@ -20,7 +20,6 @@ SplashScreen.preventAutoHideAsync();
 const AppNavigation = () => {
   const [appIsReady, setAppIsReady] = useState(false);
   const isLoggedIn = useSelector(getIsLoggedIn);
-  const datasets = useSelector((state) => state);
 
   useEffect(() => {
     async function prepare() {

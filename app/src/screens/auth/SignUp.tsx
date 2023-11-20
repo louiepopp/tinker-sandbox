@@ -36,7 +36,7 @@ const SignUp = ({ onCancel = () => {} }: Props) => {
     <View style={styles.container}>
       <View style={styles.innerContainer}>
         <Text variant={TextVariant.header}>
-                    Sign up
+          Sign up
         </Text>
         <TextField
           placeholder="Name"
@@ -59,13 +59,13 @@ const SignUp = ({ onCancel = () => {} }: Props) => {
         />
         <View style={styles.buttonContainer}>
           <Button onPress={handleSubmit}>
-                        Get started
+            Get started
           </Button>
           <Button
             variant={ButtonVariant.outlined}
             onPress={onCancel}
           >
-                        Go back
+            Go back
           </Button>
         </View>
       </View>

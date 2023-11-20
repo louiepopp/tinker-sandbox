@@ -8,7 +8,7 @@ const Create = () => {
     <Layout>
       <View style={style.container}>
         <Text variant={TextVariant.header}>
-                    Create
+            Create
         </Text>
         <Text variant={TextVariant.subheader}>
             Let's do some creating for some tinks!

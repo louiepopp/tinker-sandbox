@@ -4,22 +4,22 @@ import Tink from '../../components/Tink';
 const testTinks = [
   {
     key: 1,
-    title: 'Motivate me',
-    description: 'I\'m looking for someone to come motivate me and help me achieve my goals & dreams...',
+    title: 'Solve Nuclear Power',
+    description: "I'm looking for someone who has extensive knowledge in the field of Quantum Computing!",
     authorName: 'Louie',
     available: true,
   },
   {
     key: 2,
-    title: 'Understand me',
-    description: 'I\'m looking for someone to come motivate me and help me achieve my goals & dreams...',
+    title: 'Establish Moon Colony',
+    description: "We're looking for candidates to go colonize the moon!",
     authorName: 'Louie',
     available: undefined,
   },
   {
     key: 3,
-    title: 'Seduce me',
-    description: 'I\'m looking for someone to come motivate me and help me achieve my goals & dreams...',
+    title: 'Solve the brain',
+    description: 'Assembling a team to uncover every and all truths about the human brain.',
     authorName: 'Louie',
     available: false,
   }

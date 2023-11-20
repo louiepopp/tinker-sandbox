@@ -23,7 +23,7 @@ export const authSlice = createSlice({
         access_token: payload.name,
       };
     },
-    resetState: (state: AuthState) => {
+    resetState: () => {
       return {
         name: undefined,
         email: undefined,
