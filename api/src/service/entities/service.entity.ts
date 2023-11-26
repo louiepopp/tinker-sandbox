@@ -8,20 +8,20 @@ export type ServiceDocument = HydratedDocument<Service>;
 @Schema()
 export class Service {
   @Prop()
-      name: string;
+    name: string;
 
   @Prop()
-      price: number;
+    price: number;
 
   @Prop()
-      available: boolean;
+    available: boolean;
 
   @Prop({
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Person',
-      required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Person',
+    required: true,
   })
-      person: Person;
+    person: Person;
 }
 
 export const ServiceSchema = SchemaFactory.createForClass(Service);

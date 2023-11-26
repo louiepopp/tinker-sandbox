@@ -11,38 +11,38 @@ import { PersonWithEmailExistsException } from './person.exception';
 @Injectable()
 export class PersonService {
   @Inject(ServiceService)
-    private readonly serviceService: ServiceService;
+  private readonly serviceService: ServiceService;
 
   constructor(@InjectModel(Person.name) private personModel: Model<Person>) {}
 
   async create(createPersonDto: createPersonDto): Promise<Person> {
-      if (await this.getPerson({ email: createPersonDto.email })) {
-          throw new PersonWithEmailExistsException();
-      }
+    if (await this.getPerson({ email: createPersonDto.email })) {
+      throw new PersonWithEmailExistsException();
+    }
 
-      const saltOrRounds = 10;
-      createPersonDto.password = await bcrypt.hash(
-          createPersonDto.password,
-          saltOrRounds,
-      );
+    const saltOrRounds = 10;
+    createPersonDto.password = await bcrypt.hash(
+      createPersonDto.password,
+      saltOrRounds,
+    );
 
-      const createdPerson = new this.personModel(createPersonDto);
-      return createdPerson.save();
+    const createdPerson = new this.personModel(createPersonDto);
+    return createdPerson.save();
   }
 
   async delete(person_id: string) {
-      return this.personModel.deleteOne({ _id: person_id });
+    return this.personModel.deleteOne({ _id: person_id });
   }
 
   async findAll(): Promise<Person[]> {
-      return this.personModel.find().exec();
+    return this.personModel.find().exec();
   }
 
   async getServices(person_id: string): Promise<Service[]> {
-      return this.serviceService.findByPersonId(person_id);
+    return this.serviceService.findByPersonId(person_id);
   }
 
   async getPerson(query: object): Promise<Person> {
-      return this.personModel.findOne(query);
+    return this.personModel.findOne(query);
   }
 }

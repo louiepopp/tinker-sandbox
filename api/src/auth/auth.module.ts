@@ -9,12 +9,12 @@ import { appConstants } from 'src/constants';
 import { JwtStrategy } from './strategies/jwt.strategy';
 
 @Module({
-    imports: [
-        PassportModule,
-        PersonModule,
-        JwtModule.register({ secret: appConstants.jwtSecret })
-    ], 
-    controllers: [AuthController],
-    providers: [AuthService, LocalStrategy, JwtStrategy]
+  imports: [
+    PassportModule,
+    PersonModule,
+    JwtModule.register({ secret: appConstants.jwtSecret })
+  ], 
+  controllers: [AuthController],
+  providers: [AuthService, LocalStrategy, JwtStrategy]
 })
 export class AuthModule {}
